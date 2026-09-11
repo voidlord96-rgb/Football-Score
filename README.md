@@ -1,16 +1,109 @@
-# React + Vite
+# Footballshuru
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Footballshuru — веб-интерфейс футбольной платформы, разработанный на React. Проект представляет собой информационный интерфейс для просмотра футбольных матчей, навигации по разделам платформы и управления пользовательскими настройками.
 
-Currently, two official plugins are available:
+## О проекте
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Проект реализует интерфейс футбольного сервиса с боковой навигацией, поиском матчей, отображением текущих игр и различными пользовательскими настройками.
 
-## React Compiler
+В интерфейсе реализованы:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* боковая навигация по основным разделам сайта;
+* выделение активного пункта меню;
+* поиск по матчам и командам;
+* отображение количества уведомлений;
+* автоматическое увеличение счётчика уведомлений;
+* переключение между светлой и тёмной темой;
+* пользовательский профиль и взаимодействие с кнопкой выхода;
+* окно подтверждения выхода из аккаунта;
+* отображение списка футбольных матчей;
+* разделение матчей по лигам и турнирам;
+* отображение команд, счёта и времени начала матча;
+* выделение матчей, проходящих в прямом эфире;
+* отображение количества матчей Live;
+* фильтрация матчей по статусу `All Matches / Live`;
+* поиск матчей по названию команд;
+* переключение между датами матчей;
+* переход к просмотру календаря;
+* построение интерфейса на основе массивов данных и React-компонентов.
 
-## Expanding the Oxlint configuration
+Проект построен с использованием компонентного подхода React: отдельные элементы интерфейса вынесены в самостоятельные компоненты, а состояние и взаимодействие между ними реализованы с помощью `useState` и `useEffect`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Технологии
+
+* React
+* JavaScript
+* Vite
+* HTML
+* CSS
+* Font Awesome
+
+## Цель проекта
+
+Цель проекта — практика разработки сложного интерактивного frontend-интерфейса на React.
+
+В процессе разработки были отработаны навыки:
+
+* создания компонентной архитектуры;
+* работы с `useState` и `useEffect`;
+* передачи данных через props;
+* обработки пользовательских событий;
+* фильтрации и поиска данных;
+* условного отображения элементов;
+* управления состоянием интерфейса;
+* реализации переключения светлой и тёмной темы;
+* работы с динамическими списками через `map()`;
+* создания интерактивных элементов пользовательского интерфейса.
+
+## Скриншот проекта
+
+![Footballshuru](./screenshots/footballshuru.png)
+
+## Дизайн в Figma
+
+[Открыть макет Footballshuru в Figma](https://www.figma.com/design/MLvo8t8Wds3mGr0TVndQHi/Football-Score-Website--Community---Copy-?node-id=0-1&t=o3BupT0eoywEwKi3-1)
+
+## Запуск проекта
+
+### 1. Клонирование репозитория
+
+```bash
+git clone https://github.com/voidlord96-rgb/Football-Score.git
+```
+
+### 2. Переход в папку проекта
+
+```bash
+cd Football-Score
+```
+
+### 3. Установка зависимостей
+
+```bash
+npm install
+```
+
+### 4. Запуск проекта
+
+```bash
+npm run dev
+```
+
+После запуска откройте адрес, который Vite покажет в терминале, обычно:
+
+```text
+http://localhost:5173/
+```
+
+## Структура проекта
+
+Интерфейс разделён на независимые React-компоненты. Например:
+
+* `FootballNav` — боковая навигация, поиск, уведомления, темы и пользовательский профиль;
+* `LiveMatch` — отображение матчей, поиск, фильтрация и выбор даты;
+* `MatchTop` — верхняя панель управления матчами;
+* `MatchDates` — навигация по датам;
+* `MatchRow` — отдельный футбольный матч;
+* `LeagueBlock` — блок отдельной лиги.
+
+Такое разделение позволяет независимо развивать отдельные части интерфейса и повторно использовать компоненты.
