@@ -1,0 +1,352 @@
+/* ====== ROOT ====== */
+
+.livematch {
+  grid-area: livematch;
+  background: var(--text-main);
+  padding: 1.25rem;
+  border-radius: 1.125rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: var(--white);
+}
+
+/* ====== TOP BAR ====== */
+
+.livematch__top {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.125rem;
+  padding: 0;
+  list-style: none;
+}
+
+.livematch__live {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-dark);
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.livematch__live-text {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.livematch__live-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ====== SEARCH ====== */
+
+.livematch__search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: var(--bg-dark);
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.75rem;
+}
+
+.livematch__search-icon {
+  flex-shrink: 0;
+  color: var(--white);
+}
+
+.livematch__search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+.livematch__search-input::placeholder {
+  color: var(--white);
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* ====== FILTER ====== */
+
+.livematch__filter {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--bg-dark);
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.75rem;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.livematch__filter:hover {
+  color: var(--accent);
+}
+
+.livematch__filter-icon {
+  transition: transform 0.2s ease;
+}
+
+/* ====== DATE TABS ====== */
+
+.livematch__dates {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.livematch__date,
+.livematch__calendar {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ====== DATE ====== */
+
+.livematch__date {
+  background: var(--bg-dark);
+  padding: 0.375rem 0;
+  border: 1px solid transparent;
+  line-height: 1.3;
+  text-align: center;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.livematch__date:hover {
+  color: var(--accent);
+}
+
+.livematch__date--active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ====== CALENDAR ====== */
+
+.livematch__calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--bg-dark);
+  padding: 0.375rem 0;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding-left: 10px;
+}
+
+.livematch__calendar-text {
+  color: var(--white);
+}
+
+.livematch__calendar-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* ====== MATCH BLOCK ====== */
+
+.livematch__block {
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  background: var(--text-main);
+  border-radius: 1.125rem;
+}
+
+/* ====== LEAGUE HEADER ====== */
+
+.livematch__league {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--black);
+  padding: 0.875rem 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.livematch__league-title {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.livematch__league-icon-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.livematch__league-name,
+.livematch__league-stage {
+  margin: 0;
+}
+
+.livematch__league-stage {
+  color: #808080;
+  font-weight: bold;
+}
+
+/* ====== MATCH ROW ====== */
+
+.livematch__row {
+  display: grid;
+  grid-template-columns: 5.625rem 1fr;
+  align-items: center;
+  background: var(--bg-dark);
+  padding: 1rem 1.125rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.875rem;
+}
+
+.dark__row {
+  background: var(--text-main);
+}
+
+.livematch__time {
+  margin: 0;
+  color: var(--white);
+}
+
+.livematch__time--live {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.livematch__row--live {
+  background: var(--bg-dark);
+}
+
+/* ====== TEAMS ====== */
+
+.livematch__teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+}
+
+.livematch__team {
+  position: relative;
+  min-width: 7.5rem;
+  text-align: center;
+}
+
+.icon__left {
+  padding-right: 1.75rem;
+}
+
+.icon__right {
+  padding-left: 1.75rem;
+}
+
+/* ====== TEAM FLAGS ====== */
+
+.livematch__team::before,
+.livematch__team::after {
+  position: absolute;
+  top: 50%;
+  width: 1.125rem;
+  height: 1.125rem;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+}
+
+/* ====== FLAG POSITIONS ====== */
+
+.icon__left::after {
+  right: 0;
+}
+
+.icon__right::before {
+  left: 0;
+}
+
+/* ====== FLAGS ====== */
+
+.flag--spain::after {
+  background-image: url("../img/span.png");
+}
+
+.flag--netherlands::before {
+  background-image: url("../img/netherland.png");
+}
+
+.flag--japan::after {
+  background-image: url("../img/jp.png");
+}
+
+.flag--sweden::before {
+  background-image: url("../img/swden.png");
+}
+
+.flag--olympiakos::after {
+  background-image: url("../img/olymp.png");
+}
+
+.flag--genk::before {
+  background-image: url("../img/genl.png");
+}
+
+/* ====== SCORE ====== */
+
+.livematch__score {
+  min-width: 3.125rem;
+  color: var(--accent);
+  text-align: center;
+}
+.livematch__league-name,
+.livematch__league-stage {
+  margin: 0;
+}
+
+.livematch__date,
+.livematch__calendar {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}

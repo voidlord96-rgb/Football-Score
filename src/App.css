@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("../football-score/src/components/fonts/SofiaSans-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sofia Sans";
+  src: url("../football-score/src/components/fonts/SofiaSans-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  font-size: 1.25rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 28px auto;
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 20px;
+  grid-template-areas:
+    "footballnav banner banner banner news"
+    "footballnav banner banner banner news"
+    "footballnav livematch livematch livematch news"
+    "footballnav livematch livematch livematch news"
+    "footballnav livematch livematch livematch news";
+}
+
+.banner {
+  grid-area: banner;
+  border-radius: 20px;
+  height: 400px;
+  background: url("../src/components/img/Banner.png") top / cover no-repeat;
+  margin-bottom: 20px;
+}
+
+:root {
+  --accent: #c3cc5a;
+  --text-main: #222222;
+  --bg-dark: #303030;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+body.light-theme {
+  --accent: #3c33a5;
+  --text-main: #dddddd;
+  --bg-dark: #cfcfcf;
+  --black: #ffffff;
+  --white: #000000;
+}

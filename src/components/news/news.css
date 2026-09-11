@@ -1,0 +1,115 @@
+/* ====== ROOT ====== */
+
+.news {
+  grid-area: news;
+  padding: 30px 20px;
+  background-color: var(--text-main);
+  border-radius: 20px;
+  color: var(--white);
+}
+
+/* ====== HEADER ====== */
+
+.news__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ====== HEADER ICON ====== */
+
+.news-icon--right {
+  color: #c3cc5a;
+}
+
+/* ====== TRENDING NEWS ====== */
+
+.news__trending {
+  width: 100%;
+  margin-top: 27px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.newsTrend__title {
+  position: relative;
+  margin: 10px 0 0;
+  padding-right: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.newsTrend__text {
+  margin: 5px 0 0;
+  color: #808080;
+}
+
+/* ====== NEWS MARKER ====== */
+
+.newsTrend__title::after {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/marked.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+}
+
+/* ====== NO MARKER ====== */
+
+.noMarker::after {
+  background-image: url("../img/nomarked.png");
+}
+
+/* ====== NEWS LIST ====== */
+
+.news__list {
+  margin: 55px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news__item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 35px;
+  padding: 10px 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.news__content {
+  width: 70%;
+}
+
+/* ====== ACTIVE NEWS ====== */
+
+.news__trending--active,
+.news__item--active {
+  background-color: var(--white);
+  color: var(--text-main);
+  border-color: var(--white);
+}
+
+/* ====== ACTIVE NEWS TEXT ====== */
+
+.news__trending--active .newsTrend__text,
+.news__item--active .newsTrend__text {
+  color: var(--text-main);
+}
